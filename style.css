@@ -229,7 +229,30 @@ nav ul li a:active{
 .hover-container {
     position: absolute;
     display: none;
+    overflow: hidden;
+    white-space: inherit;
 }
+.content{
+    padding: 10px;
+    
+}
+.content h1{
+    color: #ac39cf;
+    justify-content: center;
+    margin-left: 30px;
+    padding: auto;
+    font-size: 1.5rem;
+}
+
+.content .saying{
+    color: #c565e2d2;
+    justify-content: center;
+    margin-left: 30px;
+    padding: auto;
+    font-size: 1.4rem;
+    position: absolute;
+}
+
  .photo-container {
     width: 750px;
     height: 300px;
@@ -243,12 +266,6 @@ nav ul li a:active{
     height: 100%;
     object-fit:cover;
   }
-  #typing-text {
-    border-right: 0.15em solid #000; /* Cursor style */
-    font-family: monospace; /* Font style */
-    white-space: nowrap; /* Prevent line breaks */
-    overflow: hidden; /* Hide overflowing text */
-}
 .name{
     justify-content: baseline;
     display: flex;
@@ -267,6 +284,12 @@ nav ul li a:active{
 .hover-container p{
     font-size: 1rem;
     margin-left: 0.5rem;
+}
+.hover-container h2{
+    font-size: 1.7rem;
+    margin-left: 0.5rem;
+    justify-self: center;
+    display: flex;
 }
 .hover-container a{
     background-color: rgb(53, 58, 56);
@@ -291,6 +314,13 @@ nav ul li a:active{
         height: auto;
         margin: 50px auto; /* Adjust this value as needed */
         border-radius: 0;
+    }
+    .content{
+        width: 100%;
+        height: auto;
+        margin: 50px auto; /* Adjust this value as needed */
+        border-radius: 0;
+        padding:100px;
     }
 
     .photo-container {
@@ -323,6 +353,13 @@ nav ul li a:active{
         background-color: #f0f0f0;
         padding: 20px;
     }
+    .content{
+        width: 100%;
+        height: auto;
+        margin: 50px auto; /* Adjust this value as needed */
+        border-radius: 0;
+        padding:60px
+    }
 
     .hover-container {
         position: static;
@@ -345,3 +382,30 @@ nav ul li a:active{
         margin-top: 50px; /* Adjust this value as needed */
     }
 }
+#typing-text {
+    border-right: 0.15em solid #ffffff; /* Cursor style */
+    font-family: monospace; /* Font style */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflowing text */
+    color: #a312cf;
+    font-size: 1.7rem;
+    justify-content: center;
+    margin-left: 30px;
+    padding: auto;
+    font-size: 1.7rem;
+    font-style: monospace;
+    position: relative;
+}
+@media (max-width: 768px) {
+    .content h1 {
+      font-size: 1.5rem;
+    }
+  
+    .content h5#typing-text {
+      font-size: 1.2rem;
+    }
+  
+    .content p.saying {
+      font-size: 0.8rem;
+    }
+  }
