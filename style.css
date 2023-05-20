@@ -230,14 +230,31 @@ nav ul li a:active{
     position: absolute;
     display: none;
     overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
     white-space: inherit;
     background: linear-gradient(to bottom, #854192e3, #ad51d1b6);
+   
 }
 .content{
     padding: 10px;
     
 }
 #typing-text {
+    border-right: 0.15em solid #ffffff; /* Cursor style */
+    font-family: monospace; /* Font style */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflowing text */
+    color: #a312cf;
+    font-size: 1.7rem;
+    justify-content: center;
+    margin-left: 30px;
+    padding: auto;
+    font-size: 1.7rem;
+    font-style: monospace;
+    position: relative;
+}
+#rona_type {
     border-right: 0.15em solid #ffffff; /* Cursor style */
     font-family: monospace; /* Font style */
     white-space: nowrap; /* Prevent line breaks */
@@ -285,14 +302,18 @@ nav ul li a:active{
     justify-content: baseline;
     display: flex;
     white-space: normal;
+    word-wrap: break-word;
+    white-space: normal;
 }
 .name h5 span{
     font-weight: normal;
-    padding-left: 0.4rem;
+    padding-left: 0.1rem;
     padding: 1.0rem;
     font-size: 1rem;
     overflow: hidden;
-    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal;
+ 
 }
 .hover-container h5{
     font-size: 1rem;
@@ -318,8 +339,8 @@ nav ul li a:active{
     margin: 20px 40px;
 }
 .hover-container.a1{
-    background-color: rgb(53, 58, 56);
-    color: #fff;
+    background-color: rgb(151, 90, 207);
+    color: #da44ff7a;
     padding: 10px 30px;
     display: block;
     text-align: center;
@@ -413,4 +434,18 @@ nav ul li a:active{
     .content p.saying {
       font-size: 0.8rem;
     }
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes rona_typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #fffafa }
   }
