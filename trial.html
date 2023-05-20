@@ -78,12 +78,16 @@
         <section class = "container">
             <div class="wrap">
             <div class="photo-container">
-                <img src="ehem.jpeg" alt="Image">
+                <img src="./image/ehem.jpeg" alt="Image">
               </div>
               <div class="content">
                 <h1>Hi Guys!</h1>
-                <p id="typing-text"></p>
+                <h5 id="typing-text"></h5>
+                <p class="saying">I am a second year BSIT student studying at BICOL UNIVERSITY. I firmly believe that through continous learning, the avenue of growth is never Ending!</p>
+               </div>
                 <div class="hover-container">
+
+                    <h2> INFORMATION ABOUT ME</h2>
                     <div class="name">
                         <h5>NAME: <span>Angela Hugo</span></h5>
                     </div>
@@ -101,14 +105,13 @@
                     </div>
                     <a href="resume/Hugo _RESUME.pdf" class="a1">READ MORE</a>
                 </div>
-                </div>
             </div>
             </div>
         </section>
         <section class = "container">
             <div class="wrap">
             <div class="photo-container">
-                <img src="ehem.jpeg" alt="Image">
+                <img src="./image/ehem.jpeg" alt="Image">
               </div>
               <div class="content">
                 <h1>Hi Guys!</h1>
@@ -130,7 +133,7 @@
 </body>
 <script>
     var strings = [
-        "I am Rona May"
+        "I am Angela Anne Therese"
     ];
     
     var i = 0; // Current string index
@@ -151,7 +154,7 @@
                 setTimeout(typeEffect, 100); // Delay between typing each character
             }
         } else {
-            typingText.textContent = currentString.substring(0, j); // Remove the last character
+            typingText.textContent = currentString.substring(1, j); // Remove the last character
             j--;
             if (j === 0) {
                 isDeleting = false; // Set the flag to start typing again
