@@ -209,13 +209,13 @@ nav ul li a:active{
   .wrap {
     position: relative;
     transition: left 0.3s; /* Add transition for smooth animation */
-}
+    }
 .wrap:hover {
     left: -10px; /* Adjust the value to determine the amount of adjustment to the left */
-}
+    }
 .wrap:hover .hover-container {
     display: block;
-}
+    }
 .wrap:hover .hover-container {
     display: block;
     content: "";
@@ -225,16 +225,31 @@ nav ul li a:active{
     width: 200px; /* Adjust the width of the container as needed */
     height: 100%;
     background-color: #f0f0f093; /* Adjust the background color as needed */
-}
+    }
 .hover-container {
     position: absolute;
     display: none;
     overflow: hidden;
     white-space: inherit;
+    background: linear-gradient(to bottom, #854192e3, #ad51d1b6);
 }
 .content{
     padding: 10px;
     
+}
+#typing-text {
+    border-right: 0.15em solid #ffffff; /* Cursor style */
+    font-family: monospace; /* Font style */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflowing text */
+    color: #a312cf;
+    font-size: 1.7rem;
+    justify-content: center;
+    margin-left: 30px;
+    padding: auto;
+    font-size: 1.7rem;
+    font-style: monospace;
+    position: relative;
 }
 .content h1{
     color: #ac39cf;
@@ -274,12 +289,15 @@ nav ul li a:active{
 .name h5 span{
     font-weight: normal;
     padding-left: 0.4rem;
+    padding: 1.0rem;
     font-size: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 .hover-container h5{
     font-size: 1rem;
+    padding: 0.3rem;
+    
 }
 .hover-container p{
     font-size: 1rem;
@@ -292,7 +310,7 @@ nav ul li a:active{
     display: flex;
 }
 .hover-container a{
-    background-color: rgb(53, 58, 56);
+    background-color: rgb(157, 110, 168);
     color: #fff;
     padding: 10px 30px;
     display: block;
@@ -318,9 +336,9 @@ nav ul li a:active{
     .content{
         width: 100%;
         height: auto;
-     
         border-radius: 0;
         padding:100px;
+        margin-left: -100px;
     }
 
     .photo-container {
@@ -352,11 +370,11 @@ nav ul li a:active{
         height: auto;
         background-color: #f0f0f0;
         padding: 20px;
+        margin-left: -100px;
     }
     .content{
         width: 100%;
         height: auto;
-
         border-radius: 0;
         padding:60px
     }
@@ -382,20 +400,7 @@ nav ul li a:active{
         margin-top: 50px; /* Adjust this value as needed */
     }
 }
-#typing-text {
-    border-right: 0.15em solid #ffffff; /* Cursor style */
-    font-family: monospace; /* Font style */
-    white-space: nowrap; /* Prevent line breaks */
-    overflow: hidden; /* Hide overflowing text */
-    color: #a312cf;
-    font-size: 1.7rem;
-    justify-content: center;
-    margin-left: 30px;
-    padding: auto;
-    font-size: 1.7rem;
-    font-style: monospace;
-    position: relative;
-}
+
 @media (max-width: 768px) {
     .content h1 {
       font-size: 1.5rem;
