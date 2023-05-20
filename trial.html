@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------------ UNICONS ------------------->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!------------------ CSS ------------------->
+    <link rel="stylesheet" href="style.css">
+    <title>AR/about.page</title>
+</head>
+<body>
+    <!--==================== RESPONSIVE NAVBAR====================-->
+    <header>
+		<div class="container">
+			<h2>LOGO</h2>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html" class="nav-icon">
+                                <i class="uil uil-estate"></i>
+                                Home
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="about.html" class="nav-icon">
+                                <i class="uil uil-user"></i>
+                                About
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="skills.html" class="nav-icon">
+                                <i class="uil uil-file-alt"></i>
+                                Skills
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="portfolio.html" class="nav-icon">
+                                <i class="uil uil-mountains-sun"></i>
+                                Portfolio
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="contactus.php" class="nav-icon">
+                                <i class="uil uil-message"></i>
+                                ContactUs
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="logout.php" class="logoutBtn">Logout</a>
+                        </li>
+                    </ul>
+                </nav>
+			<button class="hamburger">
+				<div class="bar"></div>
+			</button>
+		</div>
+	</header>
+	<nav class="mobile-nav">
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="skills.html">Skills</a>
+        <a href="portfolio.html">Portfolio</a>
+		<a href="contactus.php">ContactUs</a>
+        <a href="logout.php">ContactUs</a>
+	</nav>
+
+    <!--==================== FRONT PAGE ====================-->
+    <body>
+        <section class = "container">
+            <div class="wrap">
+            <div class="photo-container">
+                <img src="./image/ehem.jpeg" alt="Image">
+              </div>
+              <div class="content">
+                <h1>Hi Guys!</h1>
+                <p id="typing-text"></p>
+                <div class="hover-container">
+                    <div class="name">
+                        <h5>NAME: <span>Angela Hugo</span></h5>
+                    </div>
+                    <div class="name">
+                        <h5>AGE: <span>20</span></h5>
+                    </div>
+                    <div class="name">
+                        <h5>ADDRESS: <span>Paloyon, Nabua, Camarines Sur</span></h5>
+                    </div>
+                    <div class="name">
+                        <h5>EMAIL: <span>angela.hugo@bicol-u.edu.ph</span></h5>
+                    </div>
+                    <div class="name">
+                        <h5>LANGUAGE: <span>Tagalog, English</span></h5>
+                    </div>
+                    <a href="resume/Hugo _RESUME.pdf" class="a1">READ MORE</a>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class = "container">
+            <div class="wrap">
+            <div class="photo-container">
+                <img src="./image/ehem.jpeg" alt="Image">
+              </div>
+              <div class="content">
+                <h1>Hi Guys!</h1>
+                <p id="typing-text"></p>
+                <div class="hover-container">
+                    <h2>NAME:RONA MAY</h2>
+                    <p>This is the content inside the hovered container.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+       
+    </body>
+    
+   
+    
+    <!--==================== READ MORE ====================-->
+
+</body>
+<script>
+    var strings = [
+        "I am Rona May"
+    ];
+    
+    var i = 0; // Current string index
+    var j = 0; // Current character index
+    var isDeleting = false; // Flag to check if deleting characters
+    
+    function typeEffect() {
+        var currentString = strings[i]; // Get the current string
+        var typingText = document.getElementById("typing-text");
+    
+        if (!isDeleting) {
+            typingText.textContent += currentString.charAt(j); // Append the next character
+            j++;
+            if (j === currentString.length) {
+                isDeleting = true; // Set the flag to start deleting characters
+                setTimeout(typeEffect, 1500); // Pause before deleting
+            } else {
+                setTimeout(typeEffect, 100); // Delay between typing each character
+            }
+        } else {
+            typingText.textContent = currentString.substring(0, j); // Remove the last character
+            j--;
+            if (j === 0) {
+                isDeleting = false; // Set the flag to start typing again
+                i++;
+                if (i === strings.length) {
+                    i = 0; // Restart from the beginning
+                }
+                setTimeout(typeEffect, 500); // Delay before typing the next string
+            } else {
+                setTimeout(typeEffect, 50); // Delay between deleting each character
+            }
+        }
+    }
+    
+    // Start the typing effect when the page loads
+    window.addEventListener("DOMContentLoaded", function() {
+        typeEffect();
+    });
+    </script>
+    <script src="js/main.js"></script>
+</html>
